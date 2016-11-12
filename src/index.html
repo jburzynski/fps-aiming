@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="utilities/shim.js"></script>
+    </head>
+    <body id="body">
+        <div class="settings">
+            <h2>Movement</h2>
+            <label>strafe left:</label> <strong>s</strong>
+            <br /><label>strafe right:</label> <strong>f</strong>
+            
+            <h2>Game</h2>
+            <label>start/end:</label> <strong>p / esc</strong>
+            <br /><label for="sensitivity">sensitivity</label> <input type="text" id="sensitivity" value="0.31">
+            <br /><label for="distance">distance</label> <input type="text" id="distance" value="1">
+            
+            <h2>Enemy</h2>
+            <label>freeze/unfreeze:</label> <strong>o</strong>
+            <br /><label for="speed">speed</label> <input type="text" id="speed" value="5">
+            <br /><label for="jitter">jitter</label> <input type="text" id="jitter" value="5">
+            <br /><label for="entropy">entropy</label> <input type="text" id="entropy" value="0.5">
+        </div>
+
+        <hr>
+
+        <div id="viewport" class="viewport">
+            <div id="enemy" class="enemy"></div>
+            <div id="crosshair" class="crosshair"></div>
+            <div id="stats-box" class="stats-box">
+                acc: <strong id="accuracy">0000%</strong>
+            </div>
+        </div>
+        
+        <script src="geometry/point.js"></script>
+        <script src="geometry/bounding-box.js"></script>
+
+        <script src="business/collision-detector.js"></script>
+        <script src="business/user-input-controller.js"></script>
+
+        <script src="game-elements/viewport.js"></script>
+        <script src="game-elements/hud-element.js"></script>
+        <script src="game-elements/hud.js"></script>
+        <script src="game-elements/world-element.js"></script>
+        <script src="game-elements/world.js"></script>
+
+        <script src="ui.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
