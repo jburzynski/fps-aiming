@@ -33,7 +33,15 @@ const WorldElement = function (elementId) {
         return this.element.offsetWidth;
     };
 
+    this.setWidth = value => {
+        this.element.style.width = value + 'px';
+    };
+
     this.getHeight = () => {
         return this.element.offsetHeight;
+    };
+
+    this.setHeight = value => {
+        this.element.style.height = value + 'px';
     };
 };

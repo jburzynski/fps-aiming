@@ -9,10 +9,9 @@
     let framesHit = 0;
 
     let ui = new Ui();
-
-    let viewport = new Viewport('viewport');
+    let viewport = new Viewport('viewport', ui);
     let hud = new Hud(viewport);
-    let world = new World(viewport);
+    let world = new World(viewport, ui);
     let userInputController = new UserInputController(ui, world, hud, viewport);
     let collisionDetector = new CollisionDetector(world, viewport);
 

@@ -1,7 +1,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles/main.css">
-        <script src="utilities/shim.js"></script>
     </head>
     <body id="body">
         <div class="settings">
@@ -12,10 +11,11 @@
             <h2>Game</h2>
             <label>start/end:</label> <strong>p / esc</strong>
             <br /><label for="sensitivity">sensitivity</label> <input type="text" id="sensitivity" value="0.31">
-            <br /><label for="distance">distance</label> <input type="text" id="distance" value="1">
+            <br /><label for="background">background</label> <input type="checkbox" id="background" checked>
             
             <h2>Enemy</h2>
             <label>freeze/unfreeze:</label> <strong>o</strong>
+            <br /><label for="width">width x height [px]</label> <input type="text" id="width" value="60"> x <input type="text" id="height" value="100">
             <br /><label for="speed">speed</label> <input type="text" id="speed" value="5">
             <br /><label for="jitter">jitter</label> <input type="text" id="jitter" value="5">
             <br /><label for="entropy">entropy</label> <input type="text" id="entropy" value="0.5">
@@ -30,6 +30,8 @@
                 acc: <strong id="accuracy">0000%</strong>
             </div>
         </div>
+
+        <script src="utilities/shim.js"></script>
         
         <script src="geometry/point.js"></script>
         <script src="geometry/bounding-box.js"></script>

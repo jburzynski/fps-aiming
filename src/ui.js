@@ -19,4 +19,16 @@ const Ui = function () {
     this.getEntropy = () => {
         return getNumericInput('entropy');
     };
+
+    this.getEnemyWidth = () => {
+        return getNumericInput('width');
+    };
+
+    this.getEnemyHeight = () => {
+        return getNumericInput('height');
+    };
+
+    this.getBackground = () => {
+        return document.getElementById('background').checked;
+    };
 };
