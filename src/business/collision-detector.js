@@ -10,9 +10,5 @@ const CollisionDetector = function (world, viewport) {
         );
 
         this.world.enemy.state.hit = boundingBox.contains(this.viewport.getCenter());
-
-        if (this.world.enemy.state.hit) {
-            debugger;
-        }
     };
 };
