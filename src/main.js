@@ -19,10 +19,10 @@
         let translationX = ui.getSpeed() * direction;
         if (!world.state.enemyFrozen) world.enemy.moveX(translationX);
 
-        if (world.enemy.getX() > 4 * viewport.getWidth()) {
-            world.enemy.setX(world.enemy.getX() - 4 * viewport.getWidth());
-        } else if (world.enemy.getX() < -3 * viewport.getWidth()) {
-            world.enemy.setX(world.enemy.getX() + 4 * viewport.getWidth());
+        if (world.enemy.getX() > 2 * viewport.getWidth()) {
+            world.enemy.setX(world.enemy.getX() - 2 * viewport.getWidth());
+        } else if (world.enemy.getX() < -viewport.getWidth()) {
+            world.enemy.setX(world.enemy.getX() + 2 * viewport.getWidth());
         }
     };
 
