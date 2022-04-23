@@ -1,6 +1,6 @@
 (function () {
     let fps = 60;
-    let delayBase = 1000;
+    let delayConstant = 1000;
     let initialDirectionChangeProbability = 0.5;
 
     let direction = 1;
@@ -8,6 +8,7 @@
     let framesElapsed = 0;
     let framesHit = 0;
 
+    let mathUtils = new MathUtils();
     let ui = new Ui();
     let viewport = new Viewport('viewport', ui);
     let hud = new Hud(viewport);
@@ -66,9 +67,7 @@
             let jitter = ui.getJitter();
             let entropy = ui.getEntropy();
 
-            delay = delayBase / jitter;
-            let delta = entropy * delayBase * (2 * Math.random() - 1);
-            delay += delta;
+            delay = delayConstant * (jitter + entropy * mathUtils.random(-1, 1));
         }
 
         setTimeout(directionChangeLoop, delay);

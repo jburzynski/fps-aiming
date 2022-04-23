@@ -34,8 +34,6 @@ const UserInputController = function (ui, world, hud, viewport) {
     document.addEventListener('keydown', event => {
         this.state.keydown = event.char || event.key;
 
-        // one-time actions
-
         if (this.state.keydown === 'p' && this.state.pause) {
             mouseMovementXInFrame = 0;
             mouseMovementYInFrame = 0;

@@ -15,10 +15,10 @@
             
             <h2>Enemy</h2>
             <label>freeze/unfreeze:</label> <strong>o</strong>
-            <br /><label for="width">width x height [px]</label> <input type="text" id="width" value="60"> x <input type="text" id="height" value="100">
+            <br /><label for="width">width x height [px]</label> <input type="text" id="width" value="75"> x <input type="text" id="height" value="110">
             <br /><label for="speed">speed</label> <input type="text" id="speed" value="5">
-            <br /><label for="jitter">jitter</label> <input type="text" id="jitter" value="5">
-            <br /><label for="entropy">entropy</label> <input type="text" id="entropy" value="0.5">
+            <br /><label for="jitter">minimum time between target direction change</label> <input type="text" id="jitter" value="0">
+            <br /><label for="entropy">how often the target changes direction</label> <input type="text" id="entropy" value="0.5">
         </div>
 
         <hr>
@@ -26,11 +26,12 @@
         <div id="viewport" class="viewport">
             <div id="enemy" class="enemy"></div>
             <div id="crosshair" class="crosshair"></div>
-            <div id="stats-box" class="stats-box" style="display: none">
+            <div id="stats-box" class="stats-box"> <!-- to show/hide the stats box, remove/add the "display: none" style -->
                 acc: <strong id="accuracy">0000%</strong>
             </div>
         </div>
 
+        <script src="utilities/math-utils.js"></script>
         <script src="utilities/shim.js"></script>
         
         <script src="geometry/point.js"></script>
